@@ -53,6 +53,7 @@ AUTODELETE=no
 AUTOUPDATE=no
 AUTOSTART=no
 ARCH=$(uname -m)
+cat /proc/cpuinfo | grep  "ARMv7 Processor rev 3" | head -n1  && ARCH=armv7hf_neon
 BUILD="linux-$ARCH"
 SHOWPROGRESS=no
 WGETOPTIONS=""	# extra options for wget. Used for progress bar.
